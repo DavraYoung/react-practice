@@ -2,11 +2,10 @@ import React from 'react'
 import {FormControl} from "react-bootstrap";
 
 
-const SearchPanel = () => {
-  const placeholder = 'Type here to search';
-  const searchStyle = {fontSize: '20px'};
+const SearchPanel = ({onSearchStrChanged}) => {
   return (
       <FormControl
+          onChange={(e) => onSearchStrChanged(e.target.value)}
           placeholder="Search"
           aria-label="Search for words"
           aria-describedby="basic-addon2"

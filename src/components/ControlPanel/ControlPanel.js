@@ -4,10 +4,10 @@ import SearchPanel from "../SearchPanel";
 import FilterButtons from "../FilterButtons";
 
 
-const ControlPanel = ({className}) => {
+const ControlPanel = ({className,onSearchStrChanged}) => {
   return (
       <InputGroup {...{className}}>
-        <SearchPanel/>
+        <SearchPanel {...{onSearchStrChanged}}/>
         <FilterButtons/>
       </InputGroup>
 
