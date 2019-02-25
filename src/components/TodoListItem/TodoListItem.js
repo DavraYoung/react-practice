@@ -8,14 +8,25 @@ class TodoListItem extends Component {
 
 
   render() {
-    let {label, important = false, done = false, onDeleted, onMarkImportant, onDone} = this.props;
+    let {
+      label,
+      important = false,
+      done = false,
+      onDeleted,
+      onMarkImportant,
+      onDone
+    } = this.props;
+
     let className = 'mr-auto my-auto';
+
     if (done)
       className = className + ' done'
+
     let style = {
       fontWeight: (important ? 600 : 300),
       color: (important ? 'blue' : 'black')
     };
+
     //console.log(style);
     return (
         <div className="d-flex">

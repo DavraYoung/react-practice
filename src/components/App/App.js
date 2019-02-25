@@ -84,16 +84,16 @@ class App extends React.Component {
     })
   };
 
-  onSearchStrChanged=(searchStr)=> {
-    this.setState({searchStr});
-  }
 
   render() {
-    let onSearchStrChanged= this.onSearchStrChanged;
     return (
-        <Container className>
+        <Container className onClick={() => this.setState(() => {
+          return {
+            toggler: this.state.toggler || true
+          }
+        })}>
           <AppHeader className='my-3'/>
-          <ControlPanel {...{onSearchStrChanged}}/>
+          <ControlPanel />
           <TodoList items={this.state.items}
                     searchStr={this.state.searchStr}
                     className='mt-4'

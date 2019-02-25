@@ -1,16 +1,19 @@
 import React from 'react'
 import {InputGroup, Button,} from "react-bootstrap";
 import SearchPanel from "../SearchPanel";
-import FilterButtons from "../FilterButtons";
+import FilterButtons from '../FilterButtons';
 
 
-const ControlPanel = ({className,onSearchStrChanged}) => {
+
+const ControlPanel = ({className}) => {
   return (
-      <InputGroup {...{className}}>
-        <SearchPanel {...{onSearchStrChanged}}/>
+      <InputGroup className={className}>
+        <SearchPanel/>
         <FilterButtons/>
       </InputGroup>
 
   )
 };
-export default ControlPanel;
+
+
+export default (ControlPanel);
